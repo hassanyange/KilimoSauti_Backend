@@ -12,12 +12,15 @@
 ## FEATURES
 
 * Account App: Manages user accounts, authentication(OTP), and profile information.
+* ASR: Automatic Sound Recognition Modal train to detect and convert voice to text.
+* Chat-gpt: OpenAI for bring answers(responses) in text form for the user/farmers  questions in kilimo sauti App.
   
 
 ## TECHNOLOGIES USED
 
 * Python: The core programming language used for backend development.
 * Django: The web framework that powers this project.
+* Django Rest Framework: creation and management of APIs
 
 ## SETUP
 

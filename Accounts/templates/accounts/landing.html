@@ -1,0 +1,48 @@
+<div class="d-flex flex-column align-items-center justify-content-center py-4">
+    <div class="d-flex flex-column col-md-4 align-items-center justify-content-center py-4">
+        <h2>KILIMO SAUTI BACKEND</h2>
+        <button type="button" class="btn btn-primary btn-block mb-2" data-toggle="modal" data-target="#myModal">Register</button>
+        <button type="button" class="btn btn-info btn-block mb-2" data-toggle="modal" data-target="#myModal2">Api end points</button>
+        <button type="button" class="btn btn-secondary btn-block mb-2"  >Login</button>
+        <button type="button" class="btn btn-success btn-block mb-2">Registered users</button>
+        
+    </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Registration form</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="d-flex flex-column  align-items-center justify-content-center py-4">
+                    <div class="d-flex flex-column col-md-4 align-items-center justify-content-center py-4">
+                    <div class="col-md-6">
+                     
+                      <form method="post" action="{% url 'register_page' %}">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Register</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% include "accounts/endpoints.html"%}
